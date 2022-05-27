@@ -1,0 +1,57 @@
+/* ===============
+Global Style Start
+================== */
+/* this keeps padding and border from adding to element width */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* =============
+Global Style End
+================ */
+/* ===============
+Header Style Start
+================== */
+
+
+
+/* =============
+Header Style End
+================ */
+/* =============
+Main Style Start
+================ */
+
+
+
+/* ===========
+Main Style End
+============== */
+/* ===============
+Footer Style Start
+================== */
+
+
+
+/* =============
+Footer Style End
+================ */
+
+/* ==========
+Media Queries
+============= */
+
+/* Tablet */
+@media only screen and (min-width: 500px) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 800px) {
+}
+
+/* Widescreen */
+@media only screen and (min-width: 1200px) {
+}
+/* ==
+Fonts
+===== */
+
