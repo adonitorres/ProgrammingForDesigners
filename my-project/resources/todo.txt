@@ -1,0 +1,24 @@
+Wireframe/Comp:
+Desktop Version
+
+Tablet Version
+
+
+ERD:
+Everything
+
+
+HTML:
+Everything
+
+
+CSS:
+Everything
+
+
+Javascript:
+Everything
+
+
+PHP:
+Everything
