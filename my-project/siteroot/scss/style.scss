@@ -1,0 +1,114 @@
+// ==================
+// Global Style Start
+// ==================
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans&family=Overlock&family=Overlock+SC&display=swap');
+@import "variables";
+@import "mixins";
+
+// this keeps padding and border from adding to element width
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: $body-font;
+}
+html{
+  scroll-behavior: smooth;
+  font-family: $body-font;
+}
+body{
+  background-color: $main-color;
+  color: $text-color;
+}
+header,
+main,
+footer{
+  position: relative;
+}
+a{
+  color: $text-color;
+  text-decoration: none;
+}
+h1{
+  font-family: $title-font;
+}
+// ================
+// Global Style End
+// ================
+// ==================
+// Header Style Start
+// ==================
+header{
+  height: 63px;
+}
+.hamburger{
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  border: solid 1px red;
+}
+.hamburger ul li{
+  background-color: $white;
+  height: 5px;
+  width: 36px;
+  border-radius: 7px;
+  margin: 6px 0;
+}
+.hamburger ul li.top{
+  margin-top: 0;
+}
+.hamburger ul li.bottom{
+  margin-bottom: 0;
+}
+nav.topnav a.logo-sm{
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  background: center / contain no-repeat url(../images/logo_sm.png);
+  height: 45px;
+  width: 41px;
+  border: solid 1px red;
+}
+nav.topnav a.logo-sm h1{
+  text-indent: -999rem;
+}
+nav.topnav ul.flex{
+  display: none;
+}
+
+
+// ================
+// Header Style End
+// ================
+// ================
+// Main Style Start
+// ================
+
+
+
+// ==============
+// Main Style End
+// ==============
+// ==================
+// Footer Style Start
+// ==================
+
+
+
+// ================
+// Footer Style End
+// ================
+
+// =============
+// Media Queries
+// =============
+
+// Tablet
+@media only screen and (min-width: 576px) {
+}
+
+// Desktop
+@media only screen and (min-width: 768px) {
+}
+
+// Widescreen
+@media only screen and (min-width: 1024px) {
+}

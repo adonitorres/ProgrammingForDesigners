@@ -1,0 +1,16 @@
+// YIQ mixin
+// https://medium.com/@MikeKellyWeb/calculating-color-contrast-with-sass-eff39ef23f96
+@mixin get-color-yiq($background) {
+  $r: red($background);
+  $g: green($background);
+  $b: blue($background);
+
+  $yiq: (($r*299)+($g*587)+($b*114))/1000;
+
+  @if ($yiq >= 128) {
+    color: black;
+  }
+  @else {
+    color: white;
+  }
+}
