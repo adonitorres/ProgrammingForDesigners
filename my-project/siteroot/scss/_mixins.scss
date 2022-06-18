@@ -14,3 +14,16 @@
     color: white;
   }
 }
+
+@mixin button-style{
+  width: 16rem;
+  background-color: $gray;
+  border: 2px solid $blue-gray;
+  border-radius: .5rem;
+  &:hover, &:focus{
+    color: white;
+    background-color: $blue-gray;
+    border-color: $blue;
+    filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.5));
+  }
+}
