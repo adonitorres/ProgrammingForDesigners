@@ -20,6 +20,7 @@
   background-color: $gray;
   border: 2px solid $blue-gray;
   border-radius: .5rem;
+  z-index: 2;
   &:hover, &:focus{
     color: white;
     background-color: $blue-gray;

@@ -46,33 +46,32 @@ header {
   padding: 0 1.25rem;
 }
 
-.hamburger ul li {
+a.hamburger {
+  z-index: 10;
+}
+a.hamburger div.hamburger ul li {
   background-color: #dadada;
   height: 0.5rem;
   width: 3.6rem;
   border-radius: 7px;
   margin: 0.6rem 0;
 }
-
-.hamburger ul li.top {
+a.hamburger div.hamburger ul li.top {
   margin-top: 0;
 }
-
-.hamburger ul li.bottom {
+a.hamburger div.hamburger ul li.bottom {
   margin-bottom: 0;
 }
 
 nav.topnav {
   align-items: center;
 }
-
 nav.topnav a.logo-sm {
   display: block;
   background: center/contain no-repeat url(../images/logo_sm.png);
   height: 4.5rem;
   width: 4.1rem;
 }
-
 nav.topnav h1 {
   position: absolute;
   top: 0;
@@ -83,7 +82,6 @@ nav.topnav h1 {
   letter-spacing: 0.25rem;
   margin-top: 0.6rem;
 }
-
 nav.topnav ul.flex {
   display: none;
   position: absolute;
@@ -159,6 +157,7 @@ a.button-style {
   background-color: #484f5f;
   border: 2px solid #5e728b;
   border-radius: 0.5rem;
+  z-index: 2;
   display: block;
   text-align: center;
   line-height: 3rem;
@@ -249,30 +248,32 @@ section.contact form div label {
 }
 section.contact form div input:not([type=submit]) {
   width: 100%;
-  padding-top: 1rem;
-  line-height: 3.2rem;
+  padding: 0 0 0 2rem;
+  font-size: 1.8rem;
+  line-height: 4.2rem;
   border: none;
   background-color: rgba(72, 79, 95, 0.7490196078);
   border-radius: 0.4rem;
   margin: 0.5rem 0;
 }
-section.contact form div input:not([type=submit])::-moz-placeholder {
-  font-size: 1.8rem;
-  padding-left: 1rem;
+section.contact form div input:not([type=submit]):hover, section.contact form div input:not([type=submit]):focus {
+  background-color: #5e728b;
 }
-section.contact form div input:not([type=submit]):-ms-input-placeholder {
-  font-size: 1.8rem;
-  padding-left: 1rem;
+section.contact form div input:not([type=submit]):hover::-moz-placeholder, section.contact form div input:not([type=submit]):focus::-moz-placeholder {
+  color: #1e1e1e;
 }
-section.contact form div input:not([type=submit])::placeholder {
-  font-size: 1.8rem;
-  padding-left: 1rem;
+section.contact form div input:not([type=submit]):hover:-ms-input-placeholder, section.contact form div input:not([type=submit]):focus:-ms-input-placeholder {
+  color: #1e1e1e;
+}
+section.contact form div input:not([type=submit]):hover::placeholder, section.contact form div input:not([type=submit]):focus::placeholder {
+  color: #1e1e1e;
 }
 section.contact form div.submit {
   padding: 0.5rem 0 2rem;
 }
 section.contact form div.submit input {
   display: block;
+  cursor: pointer;
   text-align: center;
   line-height: 3rem;
   font-size: 1.4rem;
@@ -284,6 +285,13 @@ section.contact form div.submit input {
   border-radius: 0.5rem;
   margin: 0 auto;
   width: 50%;
+}
+section.contact form div.submit input:hover, section.contact form div.submit input:focus {
+  color: #1e1e1e;
+  font-weight: bold;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  box-shadow: 6px 6px 10px #000;
 }
 
 section.contact > p {
