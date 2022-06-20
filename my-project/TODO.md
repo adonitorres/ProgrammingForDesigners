@@ -1,6 +1,5 @@
 TODO
 ====
-* build the basic home page
 * chunk down the header, footer, sidebar
 * make function to count comments on each post
 * add the user and category info to the posts feed
@@ -22,3 +21,4 @@ TODO
 
 DONE
 ====
+* build the basic home page

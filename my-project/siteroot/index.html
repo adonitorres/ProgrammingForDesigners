@@ -7,6 +7,7 @@
   <title>Let&rsquo;s Play! &dash; Home</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/ddbddb4870.js" crossorigin="anonymous"></script>
 </head>
 <body class="dhome">
   <header class="flex">
@@ -21,11 +22,11 @@
       <a href="" class="logo-sm"></a>
       <h1>Let&rsquo;s Play!</h1>
       <ul class="flex">
-        <li><a href="">Home</a></li>
-        <li><a href="">Login/Register</a></li>
-        <li><a href="">Browse Games/GMs</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact Us</a></li>
+        <li class="dhome"><a href="">Home</a></li>
+        <li class="daccount"><a href="">Login/Register</a></li>
+        <li class="dbrowse"><a href="">Browse Games/GMs</a></li>
+        <li class="dabout"><a href="">About</a></li>
+        <li class="dcontact"><a href="">Contact Us</a></li>
       </ul>
     </nav>
   </header>
@@ -38,8 +39,8 @@
           <h3>Tabletop Games</h3>
           <p>Find your next game!</p>
           <ul>
-            <li><a class="button-style" href="">Browse Games</a></li>
-            <li><a class="button-style" href="">Post a Game</a></li>
+            <li class="dgames"><a class="button-style" href="">Browse Games</a></li>
+            <li class="dgms"><a class="button-style" href="">Post a Game</a></li>
           </ul>
         </div>
       </div>
@@ -54,8 +55,8 @@
       <h3>Browse Games &amp; GMs</h3>
       <p>Whether you are looking to join a new campaign, a one-shot session, or an ongoing campaign, you have come to the right place!</p>
       <ul class="flex">
-        <li><a href=""><span>Browse<br>Games</span></a></li>
-        <li><a href=""><span>Browse<br>GMs</span></a></li>
+        <li class="dgames"><a href=""><span>Browse<br>Games</span></a></li>
+        <li class="dgms"><a href=""><span>Browse<br>GMs</span></a></li>
       </ul>
     </section>
     <section class="contact">
@@ -94,27 +95,39 @@
   <footer>
     <div class="social-media">
       <ul class="flex">
-        <li><a href="">Instagram</a></li>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Twitter</a></li>
-        <li><a href="">Discord</a></li>
+        <li><a href=""><i class="fa-brands fa-instagram"><span>Instagram</span></i></a></li>
+        <li><a href=""><i class="fa-brands fa-facebook"><span>Facebook</span></i></a></li>
+        <li><a href=""><i class="fa-brands fa-twitter"><span>Twitter</span></i></a></li>
+        <li><a href=""><i class="fa-brands fa-discord"><span>Discord</span></i></a></li>
       </ul>
     </div>
-    <nav>
-      <ul>
-        <li><a href="">Let&rsquo;s Play!</a></li>
-        <li><a href="">Your Account</a></li>
-        <li><a href="">Contact Us</a></li>
-        <li><a href="">Support</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Report</a></li>
-        <li><a href="">Browse</a></li>
-        <li><a href="">Games</a></li>
-        <li><a href="">GMs</a></li>
-        <li><a href="">Policy</a></li>
-        <li><a href="">Privacy</a></li>
-        <li><a href="">Terms of Service</a></li>
-        <li><a href="">Home</a></li>
+    <nav class="bottomnav">
+      <ul class="flex">
+        <li class="dhome"><a href="">Let&rsquo;s Play!</a></li>
+        <ul class="section-left">
+          <ul class="account">
+            <li class="daccount"><a href="">Your Account</a></li>
+            <li class="dcontact"><a href="">Contact Us</a></li>
+          </ul>
+          <ul class="support">
+            <li class="dsupport"><a href="">Support</a></li>
+            <li class="dabout"><a href="">About</a></li>
+            <li class="dreport"><a href="">Report</a></li>
+          </ul>
+        </ul>
+        <ul class="section-right">
+          <ul class="browse">
+            <li class="dbrowse"><a href="">Browse</a></li>
+            <li class="dgames"><a href="">Games</a></li>
+            <li class="dgames"><a href="">GMs</a></li>
+          </ul>
+          <ul class="policy">
+            <li class="dpolicy"><a href="">Policy</a></li>
+            <li class="dprivacy"><a href="">Privacy</a></li>
+            <li class="dtos"><a href="">Terms of Service</a></li>
+          </ul>
+        </ul>
+        <li class="dhome logo-lg"><a href="">Home</a></li>
       </ul>
     </nav>
     <p>&copy; Copyright Adoni Torres 2022</p>
