@@ -62,7 +62,7 @@ if( isset( $_POST['did_login'] ) ){
 					$_SESSION['user_id'] = $hashed_id;
 
 					//redirect
-					header('Location:index.php');
+					header('Location:login.php');
 				}
 			}else{
 				$feedback = 'Incorrect Login';

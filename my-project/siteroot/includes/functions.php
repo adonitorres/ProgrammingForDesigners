@@ -207,25 +207,35 @@ function check_login(){
   }
 }
 
+function show_profile_pic( $src, $alt = "Profile Picture", $size = 50 ){
+  //check if src is blank
+  if( '' == $src ){
+    $src = ROOT_URL . '/images/default_user.png';
+  }
+  ?>
+  <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" width="<?php echo $size; ?>" height="<?php echo $size; ?>">
+  <?php
+}
+
 /**
- * Displays an HTML dropdown input of all categories in alphabetical order
+ * Displays an HTML dropdown input of all game types in alphabetical order
  * @return mixed HTML = the <select> populated with <option>s
  */
-function category_dropdown( $default = 0 ){
+function type_dropdown( $default = 0 ){
 	global $DB;
-	$result = $DB->prepare( 'SELECT * FROM categories ORDER BY name ASC' );
+	$result = $DB->prepare( 'SELECT * FROM game_type ORDER BY name ASC' );
 	$result->execute();
 	if( $result->rowCount() ){
-		echo '<select name="category_id">';
-		echo '<option>Choose a Category</option>';
+		echo '<select name="type_id">';
+		echo '<option>Choose a Game Type</option>';
 		while( $row = $result->fetch() ){
 			extract( $row );
-			if( $default == $category_id ){
+			if( $default == $type_id ){
 				$atts = 'selected';
 			}else{
 				$atts = '';
 			}
-			echo "<option value='$category_id' $atts>$name</option>";
+			echo "<option value='$type_id' $atts>$name</option>";
 		}
 		echo '</select>';
 	}

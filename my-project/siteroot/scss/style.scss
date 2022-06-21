@@ -15,6 +15,7 @@ html{
   font-family: $body-font;
 }
 body{
+  margin: 0 auto;
   background-color: $main-color;
   color: $text-color;
 }
@@ -80,6 +81,7 @@ nav.topnav{
     background: center / contain no-repeat url(../images/logo_sm.png);
     height: 4.5rem;
     width: 4.1rem;
+    z-index: 10;
   }
   h1{
     position: absolute;
@@ -465,11 +467,10 @@ main.dregister{
       color: #dadada50;
       line-height: 1.5rem;
       padding: .5rem 0 0 .5rem;
-      span{
+      a{
         color: #dadada75;
         &:hover, &:focus{
           color: $blue;
-          cursor: pointer;
         }
       }
     }

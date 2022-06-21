@@ -20,11 +20,11 @@ require('includes/header.php');
     <form class="login" method="post" action="login.php">
       <div>
       <label for="username">Username</label>
-      <input type="text" placeholder="Username">
+      <input type="text" placeholder="Username" name="username">
     </div>
       <div>
       <label for="password">Password</label>
-      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Password" name="password">
     </div>    
     <div>
       <label for="login">Login</label>

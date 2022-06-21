@@ -4,11 +4,16 @@ require_once('includes/functions.php');
 require('includes/header.php');
 ?>
 		<main class="content">
+			<form class="searchform" method="get" action="search.php">
+				<label for="search">Search</label>
+				<input type="search" name="search">
+				<input type="submit" value="Search">
+			</form>
 			<?php //get up to 20 published posts, newest first
-			$result = $DB->prepare( 'SELECT posts.*, type.*, users.username, 
+			$result = $DB->prepare( 'SELECT posts.*, game_type.*, users.username, 
 										users.profile_pic, users.user_id
-									FROM posts, type, users
-									WHERE posts.type_id = type.type_id
+									FROM posts, game_type, users
+									WHERE posts.type_id = game_type.type_id
 									AND posts.user_id = users.user_id
 									AND posts.is_published = 1
 									ORDER BY posts.date DESC
@@ -38,7 +43,7 @@ require('includes/header.php');
 				<h2><?php echo $title; ?></h2>
 				<p><?php echo $body; ?></p>
 
-				<span class="category"><?php echo $name; ?></span>
+				<span class="type"><?php echo $name; ?></span>
 				<span class="comment-count"><?php echo count_comments( $post_id ); ?></span>
 				<span class="date"><?php echo time_ago($date); ?></span>
 			</div>
@@ -52,8 +57,7 @@ require('includes/header.php');
 			
 
 		</main>
-<?php 
-require('includes/sidebar.php'); 
+<?php  
 require('includes/footer.php'); 
 ?>
 		

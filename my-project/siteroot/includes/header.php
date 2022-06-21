@@ -33,7 +33,7 @@ $logged_in_user = check_login(); ?>
     <?php //} ?>
 
     <nav class="topnav flex">
-      <a href="" class="logo-sm"></a>
+      <a href="index.php" class="logo-sm"></a>
       <h1>Let&rsquo;s Play!</h1>
       <ul id="mainMenu" class="flex hidden">
         <li class="dhome"><a href="index.php">Home</a></li>

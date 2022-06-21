@@ -118,6 +118,5 @@ require('includes/header.php');
 	} //end search validation
 	?>
 </main>
-<?php 
-require('includes/sidebar.php'); 
+<?php
 require('includes/footer.php'); 	

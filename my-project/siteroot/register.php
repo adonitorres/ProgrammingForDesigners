@@ -33,7 +33,7 @@ require('includes/header.php');
     <label for="dob">DOB</label>
     <input type="date" name="dob" placeholder="Birthday" value="<?php echo $dob; ?>" class="<?php field_error( 'password', $errors ); ?>">
 
-		<p>By clicking Create Account, you agree to our <span>Terms of Service</span>, <span>Data Policy</span>, and <span>Cookies Policy</span>. You may receive SMS notifications from us and can opt out at any time.</p>
+		<p>By clicking Create Account, you agree to our <a href="includes/tos.html">Terms of Service</a>, <a href="includes/policy.php">Data Policy</a> and <a href="includes/policy.php">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
 
 		<input type="submit" value="Create Account">
 		<input type="hidden" name="did_register" value="1">

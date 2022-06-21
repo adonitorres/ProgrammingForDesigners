@@ -16,9 +16,9 @@
             <li class="dcontact"><a href="index.php#contact">Contact Us</a></li>
           </ul>
           <ul class="support">
-            <li class="dsupport"><a href="support.php">Support</a></li>
+            <li class="dsupport"><a href="includes/support.php" target="_blank" title="opens in a new window">Support</a></li>
             <li class="dabout"><a href="index.php#about">About</a></li>
-            <li class="dreport"><a href="support.php#report">Report</a></li>
+            <li class="dreport"><a href="includes/support.php#report" target="_blank" title="opens in a new window">Report</a></li>
           </ul>
         </ul>
         <ul class="section-right">
@@ -28,9 +28,9 @@
             <li class="dgames"><a href="gms.php">GMs</a></li>
           </ul>
           <ul class="policy">
-            <li class="dpolicy"><a href="policy.php">Policy</a></li>
-            <li class="dprivacy"><a href="policy.php#privacy">Privacy</a></li>
-            <li class="dtos"><a href="tos.php">Terms of Service</a></li>
+            <li class="dpolicy"><a href="includes/policy.php" target="_blank" title="opens in a new window">Policy</a></li>
+            <li class="dprivacy"><a href="includes/policy.php#privacy" target="_blank" title="opens in a new window">Privacy</a></li>
+            <li class="dtos"><a href="includes/tos.html" target="_blank" title="opens in a new window">Terms of Service</a></li>
           </ul>
         </ul>
         <li class="dhome logo-lg"><a href="index.php">Home</a></li>

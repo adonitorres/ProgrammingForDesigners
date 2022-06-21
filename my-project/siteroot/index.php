@@ -11,8 +11,8 @@ require('includes/header.php');
 						<h3>Tabletop Games</h3>
 						<p>Find your next game!</p>
 						<ul>
-							<li class="dgames"><a class="button-style" href="">Browse Games</a></li>
-							<li class="dgms"><a class="button-style" href="">Post a Game</a></li>
+							<li class="dgames"><a class="button-style" href="index.php#browse">Browse Games</a></li>
+							<li class="dgms"><a class="button-style" href="profile.php">Post a Game</a></li>
 						</ul>
 					</div>
 				</div>
@@ -51,7 +51,7 @@ require('includes/header.php');
 					</div>
 
 					<div class="policy">
-						<p>By clicking Sign Up, you agree to our <a href="tos.php">Terms of Service</a>, <a href="policy.php">Data Policy</a> and <a href="policy.php">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.</p>
+						<p>By clicking Submit, you agree to our <a href="includes/tos.html">Terms of Service</a>, <a href="includes/policy.php">Data Policy</a> and <a href="includes/policy.php">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.</p>
 					</div>
 					
 					<div class="submit">

@@ -7,8 +7,8 @@
 
 
 define('DEBUG_MODE', true);
-define('ROOT_DIR', 'C:\xampp\htdocs\adoni\lets-play' ); // for the server
-define('ROOT_URL', 'http://localhost/adoni/lets-play/' );  // for the browser
+define('ROOT_DIR', 'C:\xampp\htdocs\adoni\lets_play' ); // for the server
+define('ROOT_URL', 'http://localhost/adoni/lets_play/' );  // for the browser
 
 define( 'USERNAME_MIN', 3 );
 define( 'USERNAME_MAX', 30 );
@@ -59,3 +59,5 @@ $DB = new PDO( "mysql:host=$host;dbname=$database_name;charset=utf8mb4",
 									PDO::ATTR_PERSISTENT => false
 								)
               );
+
+session_start();
