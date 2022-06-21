@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans&family=Overlock&family=Overlock+SC&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #2c2c2c;
+  color: #dadada;
+}
+
+header,
+main,
+footer {
+  position: relative;
+}
+
+a {
+  color: #dadada;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "Nothing You Could Do", cursive;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: #1e1e1e;
+  height: 6.25rem;
+  padding: 0 1.25rem;
+}
+
+a.hamburger {
+  z-index: 10;
+}
+a.hamburger div.hamburger ul li {
+  background-color: #dadada;
+  height: 0.5rem;
+  width: 3.6rem;
+  border-radius: 7px;
+  margin: 0.6rem 0;
+}
+a.hamburger div.hamburger ul li.top {
+  margin-top: 0;
+}
+a.hamburger div.hamburger ul li.bottom {
+  margin-bottom: 0;
+}
+
+nav.topnav {
+  align-items: center;
+}
+nav.topnav a.logo-sm {
+  display: block;
+  background: center/contain no-repeat url(../images/logo_sm.png);
+  height: 4.5rem;
+  width: 4.1rem;
+}
+nav.topnav h1 {
+  position: absolute;
+  top: 0;
+  width: 36rem;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  margin-top: 0.6rem;
+}
+nav.topnav ul.flex {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+}
+nav.topnav ul.flex li a {
+  display: block;
+  font-family: "Overlock SC", cursive;
+  text-indent: 2rem;
+  width: 100%;
+  height: 100%;
+  background-color: #484f5f;
+  border: solid 2px rgba(94, 114, 139, 0.2509803922);
+}
+nav.topnav ul.flex li a:hover, nav.topnav ul.flex li a:focus {
+  color: white;
+  background-color: #5e728b;
+  border-color: rgba(15, 79, 242, 0.5019607843);
+}
+
+main {
+  background: top/cover no-repeat url(../images/bg-texture-1-mb.jpg);
+  background-color: #484f5f;
+  background-blend-mode: soft-light;
+}
+
+section.hero {
+  background: top/cover no-repeat url(../images/home-hero-mb.webp);
+  background-color: #1e1e1e;
+  background-blend-mode: screen;
+  min-height: 576px;
+}
+section.hero div.flex {
+  background-color: rgba(0, 0, 0, 0.3137254902);
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3960784314);
+}
+section.hero p {
+  font-size: 1.6rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.15rem;
+  margin-top: 10rem;
+}
+section.hero ul {
+  margin-top: 1rem;
+}
+section.hero ul li {
+  padding: 1rem 0 0.5rem;
+}
+
+section.hero > div {
+  width: 75%;
+  padding-top: 2.5rem;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 3.6rem;
+  letter-spacing: 0.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 4rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+}
+
+a.button-style {
+  width: 16rem;
+  background-color: #484f5f;
+  border: 2px solid #5e728b;
+  border-radius: 0.5rem;
+  z-index: 2;
+  display: block;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  color: #dadada;
+  letter-spacing: 0.2rem;
+}
+a.button-style:hover, a.button-style:focus {
+  color: white;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+section:not(:first-of-type) h3 {
+  font-size: 3.2rem;
+  line-height: 6rem;
+}
+section:not(:first-of-type) p:first-of-type {
+  padding-top: 0;
+}
+section:not(:first-of-type) p {
+  padding: 2rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+section.about {
+  background: center/cover no-repeat url(../images/bg-texture-1-mb.jpg);
+  background-color: #484f5f;
+  background-blend-mode: soft-light;
+}
+section.about img {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 220px;
+}
+
+section.browse {
+  background: center/cover no-repeat url(../images/bg-texture-1-mb.jpg);
+}
+section.browse h3 {
+  letter-spacing: 0.05rem;
+}
+section.browse ul {
+  justify-content: space-evenly;
+}
+section.browse li a {
+  display: block;
+  width: 240px;
+  height: 240px;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+section.browse li a:hover span,
+section.browse li a:focus span {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+section.browse li:first-of-type a {
+  background: center/cover no-repeat url(../images/browse-games-btn.jpg);
+  background-color: #484f5f;
+  background-blend-mode: soft-light;
+}
+section.browse li:first-of-type a:hover, section.browse li:first-of-type a:focus {
+  background-blend-mode: normal;
+}
+section.browse li:last-of-type a {
+  background: center/cover no-repeat url(../images/browse-gm-btn.jpg);
+  background-color: #484f5f;
+  background-blend-mode: soft-light;
+}
+section.browse li:last-of-type a:hover, section.browse li:last-of-type a:focus {
+  background-blend-mode: normal;
+}
+
+section.contact {
+  background: top/cover no-repeat url(../images/bg-texture-1-mb.jpg);
+  background-color: #484f5f;
+  background-blend-mode: soft-light;
+}
+section.contact form {
+  width: 90%;
+  margin: 0 auto;
+}
+section.contact form div label {
+  position: absolute;
+  left: -999rem;
+}
+section.contact form div input:not([type=submit]) {
+  width: 100%;
+  padding: 0 0 0 2rem;
+  font-size: 1.8rem;
+  line-height: 4.2rem;
+  border: none;
+  background-color: rgba(72, 79, 95, 0.7490196078);
+  border-radius: 0.4rem;
+  margin: 0.5rem 0;
+}
+section.contact form div input:not([type=submit]):hover, section.contact form div input:not([type=submit]):focus {
+  background-color: #5e728b;
+}
+section.contact form div input:not([type=submit]):hover::-moz-placeholder, section.contact form div input:not([type=submit]):focus::-moz-placeholder {
+  color: #1e1e1e;
+}
+section.contact form div input:not([type=submit]):hover:-ms-input-placeholder, section.contact form div input:not([type=submit]):focus:-ms-input-placeholder {
+  color: #1e1e1e;
+}
+section.contact form div input:not([type=submit]):hover::placeholder, section.contact form div input:not([type=submit]):focus::placeholder {
+  color: #1e1e1e;
+}
+section.contact form div.submit {
+  padding: 0.5rem 0 2rem;
+}
+section.contact form div.submit input {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  color: #dadada;
+  letter-spacing: 0.2rem;
+  background-color: #484f5f;
+  border: 2px solid #5e728b;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  width: 50%;
+}
+section.contact form div.submit input:hover, section.contact form div.submit input:focus {
+  color: #1e1e1e;
+  font-weight: bold;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  box-shadow: 6px 6px 10px #000;
+}
+
+section.contact > p {
+  padding: 0 2rem;
+}
+
+section.contact form div.policy p {
+  font-size: 1rem;
+  line-height: normal;
+  color: rgba(218, 218, 218, 0.3137254902);
+  padding: 0;
+}
+
+section.contact form div.policy p a {
+  color: rgba(218, 218, 218, 0.5647058824);
+}
+
+section.contact form div.policy a:hover,
+section.contact form div.policy a:focus {
+  color: #0f4ff2;
+}
+
+main.dlogin h2 {
+  text-align: center;
+  line-height: 6rem;
+  padding-top: 1rem;
+}
+main.dlogin p {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+}
+main.dlogin form {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+main.dlogin form div label {
+  position: absolute;
+  left: -999rem;
+}
+main.dlogin form div input {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 4.2rem;
+}
+main.dlogin form div input:not([type=submit]) {
+  padding: 0 0 0 2rem;
+  background-color: rgba(72, 79, 95, 0.7490196078);
+  border: solid 2px #5e728b;
+  margin: 0.5rem 0;
+}
+main.dlogin form div input:not([type=submit]):hover, main.dlogin form div input:not([type=submit]):focus {
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+}
+main.dlogin form div input:not([type=submit]):hover::-moz-placeholder, main.dlogin form div input:not([type=submit]):focus::-moz-placeholder {
+  color: #1e1e1e;
+}
+main.dlogin form div input:not([type=submit]):hover:-ms-input-placeholder, main.dlogin form div input:not([type=submit]):focus:-ms-input-placeholder {
+  color: #1e1e1e;
+}
+main.dlogin form div input:not([type=submit]):hover::placeholder, main.dlogin form div input:not([type=submit]):focus::placeholder {
+  color: #1e1e1e;
+}
+main.dlogin form div input[type=text] {
+  border-radius: 0.4rem 0.4rem 0 0;
+  margin-bottom: 0;
+}
+main.dlogin form div input[type=password] {
+  border-radius: 0 0 0.4rem 0.4rem;
+  margin-top: 0;
+}
+main.dlogin form div input[type=submit] {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  color: #dadada;
+  letter-spacing: 0.2rem;
+  background-color: #484f5f;
+  border: 2px solid #5e728b;
+  border-radius: 0.5rem;
+  margin: 2rem auto 1rem;
+}
+main.dlogin form div input[type=submit]:hover, main.dlogin form div input[type=submit]:focus {
+  color: #1e1e1e;
+  font-weight: bold;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  box-shadow: 6px 6px 10px #000;
+}
+main.dlogin form a {
+  display: block;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 1.6rem;
+  line-height: 4rem;
+}
+main.dlogin form a:hover, main.dlogin form a:focus {
+  opacity: 1;
+  color: #0f4ff2;
+}
+main.dlogin div[class=flex] {
+  padding-top: 1rem;
+  justify-content: center;
+  background-color: rgba(72, 79, 95, 0.4);
+}
+main.dlogin div[class=flex] p {
+  opacity: 0.5;
+}
+main.dlogin div[class=flex] a {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+main.dlogin div[class=flex] a:hover, main.dlogin div[class=flex] a:focus {
+  opacity: 1;
+  color: #0f4ff2;
+}
+
+main.dregister {
+  padding: 2rem 3rem 2rem;
+}
+main.dregister h2 {
+  font-family: "Overlock", cursive;
+  font-size: 2.4rem;
+}
+main.dregister > p {
+  opacity: 0.75;
+  font-size: 1.8rem;
+  line-height: 4rem;
+}
+main.dregister form label {
+  position: absolute;
+  left: -999rem;
+}
+main.dregister form input {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 4.2rem;
+}
+main.dregister form input:not([type=submit]) {
+  padding: 0 1rem 0 2rem;
+  background-color: rgba(72, 79, 95, 0.7490196078);
+  border: solid 2px #5e728b;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+main.dregister form input:not([type=submit]):hover, main.dregister form input:not([type=submit]):focus {
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+}
+main.dregister form input:not([type=submit]):hover::-moz-placeholder, main.dregister form input:not([type=submit]):focus::-moz-placeholder {
+  color: #1e1e1e;
+}
+main.dregister form input:not([type=submit]):hover:-ms-input-placeholder, main.dregister form input:not([type=submit]):focus:-ms-input-placeholder {
+  color: #1e1e1e;
+}
+main.dregister form input:not([type=submit]):hover::placeholder, main.dregister form input:not([type=submit]):focus::placeholder {
+  color: #1e1e1e;
+}
+main.dregister form p:first-of-type {
+  padding: 1rem 0 0.5rem 0.5rem;
+}
+main.dregister form p:first-of-type a {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  text-align: center;
+  opacity: 0.75;
+  background-color: #484f5f;
+  border: solid 1px #5e728b;
+  border-radius: 50%;
+}
+main.dregister form p:first-of-type a:hover, main.dregister form p:first-of-type a:focus {
+  color: #1e1e1e;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  box-shadow: 6px 6px 12px #000000;
+}
+main.dregister form p {
+  color: rgba(218, 218, 218, 0.3137254902);
+  line-height: 1.5rem;
+  padding: 0.5rem 0 0 0.5rem;
+}
+main.dregister form p span {
+  color: rgba(218, 218, 218, 0.4588235294);
+}
+main.dregister form p span:hover, main.dregister form p span:focus {
+  color: #0f4ff2;
+  cursor: pointer;
+}
+main.dregister form input[type=submit] {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  color: #dadada;
+  letter-spacing: 0.2rem;
+  background-color: #484f5f;
+  border: 2px solid #5e728b;
+  border-radius: 0.5rem;
+  margin: 1rem auto;
+}
+main.dregister form input[type=submit]:hover, main.dregister form input[type=submit]:focus {
+  color: #1e1e1e;
+  font-weight: bold;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  box-shadow: 6px 6px 10px #000;
+}
+
+footer {
+  background: center/cover no-repeat url(../images/bg-texture-2-mb.jpg);
+}
+footer div.social-media ul {
+  justify-content: space-evenly;
+}
+footer div.social-media ul li {
+  padding: 2rem 0 1rem;
+}
+footer div.social-media ul li a {
+  font-size: 6rem;
+  color: #dadada;
+  opacity: 0.5;
+}
+footer div.social-media ul li a:hover, footer div.social-media ul li a:focus {
+  opacity: 1;
+}
+footer nav.bottomnav > ul {
+  flex-wrap: wrap;
+}
+footer nav.bottomnav > ul > ul {
+  width: 50%;
+}
+footer nav.bottomnav > ul li {
+  padding-left: 2rem;
+}
+footer nav.bottomnav > ul li a {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+  opacity: 0.75;
+}
+footer nav.bottomnav > ul li a:hover, footer nav.bottomnav > ul li a:focus {
+  opacity: 1;
+  text-shadow: 8px 8px 6px #000;
+}
+footer nav.bottomnav > ul li:not(:first-of-type) {
+  width: 100%;
+}
+footer nav.bottomnav > ul li:not(:first-of-type) a {
+  font-family: "Open Sans", sans-serif;
+}
+footer nav.bottomnav > ul li.dsupport a,
+footer nav.bottomnav > ul li.dbrowse a,
+footer nav.bottomnav > ul li.dpolicy a {
+  font-family: "Overlock SC", cursive;
+  font-size: 3.2rem;
+  line-height: 5rem;
+}
+footer nav.bottomnav > ul li.dhome:first-of-type {
+  width: 100%;
+}
+footer nav.bottomnav > ul li.dhome:first-of-type a {
+  display: block;
+  font-size: 3.6rem;
+  line-height: 6rem;
+  font-family: "Nothing You Could Do", cursive;
+  text-align: center;
+}
+footer nav.bottomnav > ul li.logo-lg {
+  width: 100%;
+  padding: 2rem 0;
+}
+footer nav.bottomnav > ul li.logo-lg a {
+  background: center/contain no-repeat url(../images/logo_lg_spinning.gif);
+  display: block;
+  min-height: 288px;
+  text-indent: -999rem;
+}
+footer p {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  opacity: 0.35;
+  padding-bottom: 2rem;
+}/*# sourceMappingURL=style.css.map */
