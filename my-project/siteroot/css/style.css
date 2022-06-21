@@ -37,6 +37,10 @@ h1, h2, h3 {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   justify-content: space-between;
   flex-direction: row-reverse;
@@ -83,7 +87,6 @@ nav.topnav h1 {
   margin-top: 0.6rem;
 }
 nav.topnav ul.flex {
-  display: none;
   position: absolute;
   top: 100px;
   left: 0;
@@ -97,8 +100,6 @@ nav.topnav ul.flex li a {
   text-indent: 2rem;
   width: 100%;
   height: 100%;
-  font-size: 3.2rem;
-  line-height: 6rem;
   background-color: #484f5f;
   border: solid 2px rgba(94, 114, 139, 0.2509803922);
 }
@@ -106,6 +107,12 @@ nav.topnav ul.flex li a:hover, nav.topnav ul.flex li a:focus {
   color: white;
   background-color: #5e728b;
   border-color: rgba(15, 79, 242, 0.5019607843);
+}
+
+main {
+  background: top/cover no-repeat url(../images/bg-texture-1-mb.jpg);
+  background-color: #484f5f;
+  background-blend-mode: soft-light;
 }
 
 section.hero {
@@ -189,6 +196,11 @@ section.about {
   background: center/cover no-repeat url(../images/bg-texture-1-mb.jpg);
   background-color: #484f5f;
   background-blend-mode: soft-light;
+}
+section.about img {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 220px;
 }
 
 section.browse {
@@ -279,7 +291,6 @@ section.contact form div.submit input {
   font-size: 1.4rem;
   color: #dadada;
   letter-spacing: 0.2rem;
-  width: 16rem;
   background-color: #484f5f;
   border: 2px solid #5e728b;
   border-radius: 0.5rem;
@@ -312,6 +323,195 @@ section.contact form div.policy p a {
 section.contact form div.policy a:hover,
 section.contact form div.policy a:focus {
   color: #0f4ff2;
+}
+
+main.dlogin h2 {
+  text-align: center;
+  line-height: 6rem;
+  padding-top: 1rem;
+}
+main.dlogin p {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+}
+main.dlogin form {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+main.dlogin form div label {
+  position: absolute;
+  left: -999rem;
+}
+main.dlogin form div input {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 4.2rem;
+}
+main.dlogin form div input:not([type=submit]) {
+  padding: 0 0 0 2rem;
+  background-color: rgba(72, 79, 95, 0.7490196078);
+  border: solid 2px #5e728b;
+  margin: 0.5rem 0;
+}
+main.dlogin form div input:not([type=submit]):hover, main.dlogin form div input:not([type=submit]):focus {
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+}
+main.dlogin form div input:not([type=submit]):hover::-moz-placeholder, main.dlogin form div input:not([type=submit]):focus::-moz-placeholder {
+  color: #1e1e1e;
+}
+main.dlogin form div input:not([type=submit]):hover:-ms-input-placeholder, main.dlogin form div input:not([type=submit]):focus:-ms-input-placeholder {
+  color: #1e1e1e;
+}
+main.dlogin form div input:not([type=submit]):hover::placeholder, main.dlogin form div input:not([type=submit]):focus::placeholder {
+  color: #1e1e1e;
+}
+main.dlogin form div input[type=text] {
+  border-radius: 0.4rem 0.4rem 0 0;
+  margin-bottom: 0;
+}
+main.dlogin form div input[type=password] {
+  border-radius: 0 0 0.4rem 0.4rem;
+  margin-top: 0;
+}
+main.dlogin form div input[type=submit] {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  color: #dadada;
+  letter-spacing: 0.2rem;
+  background-color: #484f5f;
+  border: 2px solid #5e728b;
+  border-radius: 0.5rem;
+  margin: 2rem auto 1rem;
+}
+main.dlogin form div input[type=submit]:hover, main.dlogin form div input[type=submit]:focus {
+  color: #1e1e1e;
+  font-weight: bold;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  box-shadow: 6px 6px 10px #000;
+}
+main.dlogin form a {
+  display: block;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 1.6rem;
+  line-height: 4rem;
+}
+main.dlogin form a:hover, main.dlogin form a:focus {
+  opacity: 1;
+  color: #0f4ff2;
+}
+main.dlogin div[class=flex] {
+  padding-top: 1rem;
+  justify-content: center;
+  background-color: rgba(72, 79, 95, 0.4);
+}
+main.dlogin div[class=flex] p {
+  opacity: 0.5;
+}
+main.dlogin div[class=flex] a {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+main.dlogin div[class=flex] a:hover, main.dlogin div[class=flex] a:focus {
+  opacity: 1;
+  color: #0f4ff2;
+}
+
+main.dregister {
+  padding: 2rem 3rem 2rem;
+}
+main.dregister h2 {
+  font-family: "Overlock", cursive;
+  font-size: 2.4rem;
+}
+main.dregister > p {
+  opacity: 0.75;
+  font-size: 1.8rem;
+  line-height: 4rem;
+}
+main.dregister form label {
+  position: absolute;
+  left: -999rem;
+}
+main.dregister form input {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 4.2rem;
+}
+main.dregister form input:not([type=submit]) {
+  padding: 0 1rem 0 2rem;
+  background-color: rgba(72, 79, 95, 0.7490196078);
+  border: solid 2px #5e728b;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+main.dregister form input:not([type=submit]):hover, main.dregister form input:not([type=submit]):focus {
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+}
+main.dregister form input:not([type=submit]):hover::-moz-placeholder, main.dregister form input:not([type=submit]):focus::-moz-placeholder {
+  color: #1e1e1e;
+}
+main.dregister form input:not([type=submit]):hover:-ms-input-placeholder, main.dregister form input:not([type=submit]):focus:-ms-input-placeholder {
+  color: #1e1e1e;
+}
+main.dregister form input:not([type=submit]):hover::placeholder, main.dregister form input:not([type=submit]):focus::placeholder {
+  color: #1e1e1e;
+}
+main.dregister form p:first-of-type {
+  padding: 1rem 0 0.5rem 0.5rem;
+}
+main.dregister form p:first-of-type a {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  text-align: center;
+  opacity: 0.75;
+  background-color: #484f5f;
+  border: solid 1px #5e728b;
+  border-radius: 50%;
+}
+main.dregister form p:first-of-type a:hover, main.dregister form p:first-of-type a:focus {
+  color: #1e1e1e;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  box-shadow: 6px 6px 12px #000000;
+}
+main.dregister form p {
+  color: rgba(218, 218, 218, 0.3137254902);
+  line-height: 1.5rem;
+  padding: 0.5rem 0 0 0.5rem;
+}
+main.dregister form p span {
+  color: rgba(218, 218, 218, 0.4588235294);
+}
+main.dregister form p span:hover, main.dregister form p span:focus {
+  color: #0f4ff2;
+  cursor: pointer;
+}
+main.dregister form input[type=submit] {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  color: #dadada;
+  letter-spacing: 0.2rem;
+  background-color: #484f5f;
+  border: 2px solid #5e728b;
+  border-radius: 0.5rem;
+  margin: 1rem auto;
+}
+main.dregister form input[type=submit]:hover, main.dregister form input[type=submit]:focus {
+  color: #1e1e1e;
+  font-weight: bold;
+  background-color: #5e728b;
+  border-color: #0f4ff2;
+  box-shadow: 6px 6px 10px #000;
 }
 
 footer {

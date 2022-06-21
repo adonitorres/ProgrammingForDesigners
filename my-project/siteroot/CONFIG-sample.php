@@ -7,19 +7,16 @@
 
 
 define('DEBUG_MODE', true);
-define('ROOT_DIR', 'C:\xampp\htdocs\adoni\lets-play' ); // for the server
-define('ROOT_URL', 'http://localhost/adoni/lets-play/' );  // for the browser
-
-define( 'USERNAME_MIN', 3 );
-define( 'USERNAME_MAX', 30 );
-
-define( 'PASSWORD_MIN', 8 );
+define('ROOT_DIR', '' );
+define('ROOT_URL', '' );
 
 //Database Configuration
-$database_name = 'lets_play';
-$database_user = 'lets-play';
-$database_password = '$2y$10$Y64KcY7kqGr7qlSBnRvVW.x3dBpm6B7gNWLUvYSWSbuV3pwVzY/yO';
+
+$database_name = '';
+$database_user = '';
+$database_password = '';
 $host = 'localhost';
+
 
 
 /* -------------------------stop editing------------------------ */
@@ -51,11 +48,11 @@ if(DEBUG_MODE){
  * Connect to our Database
  * @link https://phpbestpractices.org/#mysql
  */
-$DB = new PDO( "mysql:host=$host;dbname=$database_name;charset=utf8mb4",
-								$database_user,
-								$database_password,
-								array(
-									PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-									PDO::ATTR_PERSISTENT => false
-								)
-              );
+$DB = new PDO(    "mysql:host=$host;dbname=$database_name;charset=utf8mb4",
+                    $database_user,
+                    $database_password,
+                    array(
+                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                        PDO::ATTR_PERSISTENT => false
+                    )
+                );

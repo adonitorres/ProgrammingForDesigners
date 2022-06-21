@@ -36,6 +36,9 @@ h1, h2, h3{
 .grid{
   display: grid;
 }
+.hidden{
+  display: none;
+}
 // ================
 // Global Style End
 // ================
@@ -89,7 +92,6 @@ nav.topnav{
     margin-top: .6rem;
   }
   ul.flex{
-    display: none;
     position: absolute;
     top: 100px;
     left: 0;
@@ -102,8 +104,8 @@ nav.topnav{
       text-indent: 2rem;
       width: 100%;
       height: 100%;
-      font-size: 3.2rem;
-      line-height: 6rem;
+      // font-size: 3.2rem;
+      // line-height: 6rem;
       background-color: $gray;
       border: solid 2px #5E728B40;
       &:hover, &:focus{
@@ -120,6 +122,11 @@ nav.topnav{
 // ================
 // Main Style Start
 // ================
+main{
+  background: top / cover no-repeat url(../images/bg-texture-1-mb.jpg);
+  background-color: $gray;
+  background-blend-mode: soft-light;
+}
 section.hero{
   background: top / cover no-repeat url(../images/home-hero-mb.webp);
   background-color: $black;
@@ -188,6 +195,11 @@ section.about{
   background: center / cover no-repeat url(../images/bg-texture-1-mb.jpg);
   background-color: $gray;
   background-blend-mode: soft-light;
+  img{
+    margin: 0 auto;
+    width: 100%;
+    min-height: 220px;
+  }
 }
 section.browse{
   background: center / cover no-repeat url(../images/bg-texture-1-mb.jpg);
@@ -251,7 +263,6 @@ section.contact{
     background-color: #484F5FBF;
     border-radius: .4rem;
     margin: .5rem 0;
-    ;
     &:hover, &:focus{
       background-color: $blue-gray;
       &::placeholder{
@@ -270,7 +281,6 @@ section.contact{
     font-size: 1.4rem;
     color: $white;
     letter-spacing: .2rem;
-    width: 16rem;
     background-color: $gray;
     border: 2px solid $blue-gray;
     border-radius: .5rem;
@@ -300,6 +310,188 @@ section.contact form div.policy p a{
 section.contact form div.policy a:hover,
 section.contact form div.policy a:focus{
   color: $blue;
+}
+// Contact Page Styling
+main.dlogin{
+  h2{
+    text-align: center;
+    line-height: 6rem;
+    padding-top: 1rem;
+  }
+  p{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    padding-bottom: 1rem;
+  }
+  form{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    div{
+      label{
+      position: absolute;
+      left: -999rem;
+      }
+      input{
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 4.2rem;
+      }
+      input:not([type="submit"]){
+        padding: 0 0 0 2rem;
+        background-color: #484F5FBF;
+        border: solid 2px $blue-gray;
+        margin: .5rem 0;
+        &:hover, &:focus{
+          background-color: $blue-gray;
+          border-color: $blue;
+          &::placeholder{
+            color: $black;
+          }
+        }
+      }
+      input[type="text"]{
+        border-radius: .4rem .4rem 0 0;
+        margin-bottom: 0;
+      }
+      input[type="password"]{
+        border-radius: 0 0 .4rem .4rem;
+        margin-top: 0;
+      }
+      input[type="submit"]{
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        color: $white;
+        letter-spacing: .2rem;
+        background-color: $gray;
+        border: 2px solid $blue-gray;
+        border-radius: .5rem;
+        margin: 2rem auto 1rem;
+        &:hover, &:focus{
+          color: $black;
+          font-weight: bold;
+          background-color: $blue-gray;
+          border-color: $blue;
+          box-shadow: 6px 6px 10px #000;
+        }
+      }
+    }
+    a{
+      display: block;
+      text-align: center;
+      opacity: .5;
+      font-size: 1.6rem;
+      line-height: 4rem;
+      &:hover, &:focus{
+        opacity: 1;
+        color: $blue;
+      }
+    }
+  }
+  div[class="flex"]{
+    padding-top: 1rem;
+    justify-content: center;
+    background-color: #484F5F66;
+    p{
+      opacity: .5;
+    }
+    a{
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      &:hover, &:focus{
+        opacity: 1;
+        color: $blue;
+      }
+    }
+  }
+}
+main.dregister{
+  padding: 2rem 3rem 2rem;
+  h2{
+    font-family: $subheading-font;
+    font-size: 2.4rem;
+  }
+  &>p{
+    opacity: .75;
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+  form{
+    label{
+    position: absolute;
+    left: -999rem;
+    }
+    input{
+      width: 100%;
+      font-size: 1.8rem;
+      line-height: 4.2rem;
+    }
+    input:not([type="submit"]){
+      padding: 0 1rem 0 2rem;
+      background-color: #484F5FBF;
+      border: solid 2px $blue-gray;
+      border-radius: 10px;
+      margin: .5rem 0;
+      &:hover, &:focus{
+        background-color: $blue-gray;
+        border-color: $blue;
+        &::placeholder{
+          color: $black;
+        }
+      }
+    }
+    p:first-of-type{
+      padding: 1rem 0 .5rem .5rem;
+      a{
+        display: inline-block;
+        width: 1.75rem;
+        height: 1.75rem;
+        text-align: center;
+        opacity: .75;
+        background-color: $gray;
+        border: solid 1px $blue-gray;
+        border-radius: 50%;
+        &:hover, &:focus{
+          color: $black;
+          background-color: $blue-gray;
+          border-color: $blue;
+          box-shadow: 6px 6px 12px #000000;
+        }
+      }
+    }
+    p{
+      color: #dadada50;
+      line-height: 1.5rem;
+      padding: .5rem 0 0 .5rem;
+      span{
+        color: #dadada75;
+        &:hover, &:focus{
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+    }
+    input[type="submit"]{
+      display: block;
+      cursor: pointer;
+      text-align: center;
+      color: $white;
+      letter-spacing: .2rem;
+      background-color: $gray;
+      border: 2px solid $blue-gray;
+      border-radius: .5rem;
+      margin: 1rem auto;
+      &:hover, &:focus{
+        color: $black;
+        font-weight: bold;
+        background-color: $blue-gray;
+        border-color: $blue;
+        box-shadow: 6px 6px 10px #000;
+      }
+    }
+  }
 }
 // ==============
 // Main Style End

@@ -1,3 +1,6 @@
+<?php 
+//check login keys
+$logged_in_user = check_login(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +23,24 @@
         </ul>
       </div>
     </a>
+
+    <?php
+    //if( $logged_in_user ){
+    ?>
+      <!-- <a href="login.php?action=logout">Log Out</a> -->
+    <?php //}else{ ?>
+      <!-- <a href="register.php">Create an Account</a> -->
+    <?php //} ?>
+
     <nav class="topnav flex">
       <a href="" class="logo-sm"></a>
       <h1>Let&rsquo;s Play!</h1>
-      <ul class="flex">
+      <ul id="mainMenu" class="flex hidden">
         <li class="dhome"><a href="index.php">Home</a></li>
-        <li class="daccount"><a href="account.php">Login/Register</a></li>
+        <li class="dlogin"><a href="login.php">Login/Register</a></li>
         <li class="dbrowse"><a href="index.php#browse">Browse Games/GMs</a></li>
-        <li class="dabout"><a href="">About</a></li>
-        <li class="dcontact"><a href="">Contact Us</a></li>
+        <li class="dabout"><a href="index.php#about">About</a></li>
+        <li class="dcontact"><a href="index.php#contact">Contact Us</a></li>
       </ul>
     </nav>
   </header>
